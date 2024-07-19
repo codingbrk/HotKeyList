@@ -12,3 +12,42 @@ Alt + Shift + Backspace = 모든 편집창 닫기
 Alt + F12 = 터미널창 이동
 Alt + > = 터미널 새창 열기 
 Ctrl + k = HotkeyList 이동
+
+
+<keymap version="1" name="Windows copy" parent="$default">
+  <action id="CloseAllEditorsButActive">
+    <keyboard-shortcut first-keystroke="shift alt back_space" />
+  </action>
+  <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="alt back_space" />
+  </action>
+  <action id="GotoImplementation">
+    <keyboard-shortcut first-keystroke="alt i" />
+  </action>
+  <action id="MoveTabRight">
+    <keyboard-shortcut first-keystroke="alt l" />
+  </action>
+  <action id="NextSplitter">
+    <keyboard-shortcut first-keystroke="alt minus" />
+  </action>
+  <action id="NextTab">
+    <keyboard-shortcut first-keystroke="alt right" />
+    <keyboard-shortcut first-keystroke="alt k" />
+  </action>
+  <action id="PreviousTab">
+    <keyboard-shortcut first-keystroke="alt left" />
+    <keyboard-shortcut first-keystroke="alt j" />
+  </action>
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="shift alt l" />
+  </action>
+  <action id="Terminal.MoveToolWindowTabLeft">
+    <keyboard-shortcut first-keystroke="alt j" />
+  </action>
+  <action id="Terminal.MoveToolWindowTabRight">
+    <keyboard-shortcut first-keystroke="alt k" />
+  </action>
+  <action id="Unsplit">
+    <keyboard-shortcut first-keystroke="alt m" />
+  </action>
+</keymap>
