@@ -1,5 +1,7 @@
 Alt + 1 = 프로젝트 탐색기
 Alt + 2 = 편집창 최대화
+Alt + 9 = 디버그창
+Alt + 0 = 터미널창
 Alt + ` = 편집창 닫기 
 Alt + F1 = 현재 파일 프로젝트 탐색기 창 위치 이동
 Alt + j = 이전 탭 이동
@@ -12,18 +14,54 @@ Alt + Shift + Backspace = 모든 편집창 닫기
 Alt + F12 = 터미널창 이동
 Alt + > = 터미널 새창 열기 
 Ctrl + k = HotkeyList 이동
+Alt + i = 구현부로 이동
 
-
-<keymap version="1" name="Windows copy" parent="$default">
+<keymap version="1" name="Windows copy 1" parent="$default">
+  <action id="$Redo">
+    <keyboard-shortcut first-keystroke="shift ctrl z" />
+  </action>
+  <action id="$Undo">
+    <keyboard-shortcut first-keystroke="ctrl z" />
+  </action>
+  <action id="ActivateCommitToolWindow" />
+  <action id="ActivateDebugToolWindow">
+    <keyboard-shortcut first-keystroke="alt 5" />
+    <keyboard-shortcut first-keystroke="alt f11" />
+    <keyboard-shortcut first-keystroke="alt 9" />
+  </action>
+  <action id="ActivateServicesToolWindow" />
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="alt f12" />
+    <keyboard-shortcut first-keystroke="alt 0" />
+  </action>
+  <action id="ActivateVersionControlToolWindow">
+    <keyboard-shortcut first-keystroke="alt 8" />
+  </action>
+  <action id="ChangesView.ToggleCommitUi" />
+  <action id="CheckinProject" />
   <action id="CloseAllEditorsButActive">
     <keyboard-shortcut first-keystroke="shift alt back_space" />
   </action>
   <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="ctrl f4" />
     <keyboard-shortcut first-keystroke="alt back_space" />
   </action>
+  <action id="Docker.RemoteServers.CreateTerminal">
+    <keyboard-shortcut first-keystroke="shift alt 0" />
+  </action>
   <action id="GotoImplementation">
+    <keyboard-shortcut first-keystroke="ctrl alt b" />
+    <mouse-shortcut keystroke="control alt button1" />
     <keyboard-shortcut first-keystroke="alt i" />
   </action>
+  <action id="GotoNextBookmark">
+    <keyboard-shortcut first-keystroke="ctrl j" />
+  </action>
+  <action id="HideActiveWindow">
+    <keyboard-shortcut first-keystroke="shift escape" />
+    <keyboard-shortcut first-keystroke="alt h" />
+  </action>
+  <action id="InsertLiveTemplate" />
   <action id="MoveTabRight">
     <keyboard-shortcut first-keystroke="alt l" />
   </action>
@@ -38,16 +76,42 @@ Ctrl + k = HotkeyList 이동
     <keyboard-shortcut first-keystroke="alt left" />
     <keyboard-shortcut first-keystroke="alt j" />
   </action>
+  <action id="RunJsbtTask" />
+  <action id="SelectNextOccurrence">
+    <keyboard-shortcut first-keystroke="ctrl k" />
+  </action>
   <action id="SplitVertically">
     <keyboard-shortcut first-keystroke="shift alt l" />
   </action>
+  <action id="TableResult.UnselectPreviousOccurrence" />
   <action id="Terminal.MoveToolWindowTabLeft">
+    <keyboard-shortcut first-keystroke="shift ctrl alt left" />
     <keyboard-shortcut first-keystroke="alt j" />
   </action>
   <action id="Terminal.MoveToolWindowTabRight">
+    <keyboard-shortcut first-keystroke="shift ctrl alt right" />
     <keyboard-shortcut first-keystroke="alt k" />
   </action>
-  <action id="Unsplit">
-    <keyboard-shortcut first-keystroke="alt m" />
+  <action id="ToggleBookmark">
+    <keyboard-shortcut first-keystroke="f11" />
+    <keyboard-shortcut first-keystroke="shift ctrl l" />
   </action>
+  <action id="Tree-selectNextSibling">
+    <keyboard-shortcut first-keystroke="alt j" />
+  </action>
+  <action id="Uml.ExpandNodes" />
+  <action id="UnselectPreviousOccurrence" />
+  <action id="Unsplit">
+    <keyboard-shortcut first-keystroke="shift alt j" />
+  </action>
+  <action id="Vcs.ToggleAmendCommitMode" />
+  <action id="VcsShowNextChangeMarker">
+    <keyboard-shortcut first-keystroke="shift ctrl alt down" />
+    <keyboard-shortcut first-keystroke="alt g" />
+  </action>
+  <action id="VcsShowPrevChangeMarker">
+    <keyboard-shortcut first-keystroke="shift ctrl alt up" />
+    <keyboard-shortcut first-keystroke="alt p" />
+  </action>
+  <action id="context.load" />
 </keymap>
